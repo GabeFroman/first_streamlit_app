@@ -24,7 +24,7 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 
 # Display the table on the page.
 streamlit.dataframe(fruits_to_show)
-streamlit.stop()
+
 #New Scetion to display fruityvice api response
 streamlit.header("Fruityvice Fruit Advice!")
 try:
@@ -32,7 +32,7 @@ try:
    if not fruit_choice:
       streamlit.error("Please select a fruit to get information.")
    else:
-      fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" "+ fruit_choice")
+      fruityvice_response = requests.get("https://fruityvice.com/api/fruit/")
       fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
       streamlit.dataframe(fruityvice_normalized)
       
