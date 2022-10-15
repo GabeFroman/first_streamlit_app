@@ -39,15 +39,6 @@ try:
 except URLError as e:
    streamlit.error()
   
-streamlit.write('The user entered ', fruit_choice)
-
-#import requests
-
-
-
-# make json look pretty
-
-# makes a table on the screen
 
 #troubleshooting
 streamlit.stop()
